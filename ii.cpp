@@ -15,12 +15,31 @@ void Binarysearch(int arr[], int size, int elemwnt)
   else if( arr[mid] == element)
     
   {
-    count<<element<<" exist in index" <<mid<<end;
+    cout<<element<<" exist in index" <<mid<<end;
     break;
   }
+  else 
+    last=mid-1;
+  
+  mid=(start + last) / 2; }
   
   if(start>last)
-    count<<" element does not exist in index "<<end;
+    cout<<" element does not exist in index "<<end;
 }
 
-void printArray(int arr[],
+void printArray(int arr[], int size)
+{     for(int i=0; i<size; i++)
+  cout<<arr[i]<<"\t";
+ cout<<end;   }
+
+int main()
+{   int Array[SIZE]={2,6,8,13,18,19,24,28,29,33};
+    int num;
+ cout<< " Enter the element you want to find";
+ cin>>num;
+ 
+ printArray(Array, SIZE);
+ 
+ BinarySearch(Array, SIZE, num);
+  return 0;
+}
